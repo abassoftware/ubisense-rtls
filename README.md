@@ -5,10 +5,16 @@ This is a mock server that sends [ubisense rtls](http://ubisense.net/en/products
 
 Use Python 2.7
 
+## Server mode
 ```bash
 python ubisenseServer.py --url http://<server>:<port>/<endpoint-of-your-client>
 ```
 This will send JSON Post body to the endpoint.
+Function `complete_run` will send a pre-defined scenario of locations, with some random behavior.
+Function `random_run` will send a random location in every request. See function ```randomLocation```
+Uncomment in python script as needed.
+
+## Single POST mode
 
 ```bash
 python ubisenseServer.py --url http://<server>:<port>/<endpoint-of-your-client> --location LOCATION1
